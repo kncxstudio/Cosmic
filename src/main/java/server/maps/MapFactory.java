@@ -29,7 +29,10 @@ import provider.DataProviderFactory;
 import provider.DataTool;
 import provider.wz.WZFiles;
 import scripting.event.EventInstanceManager;
-import server.life.*;
+import server.life.AbstractLoadedLife;
+import server.life.LifeFactory;
+import server.life.Monster;
+import server.life.PlayerNPC;
 import server.partyquest.GuardianSpawnPoint;
 import tools.DatabaseConnection;
 import tools.StringUtil;
@@ -250,13 +253,6 @@ public class MapFactory {
                 }
             } catch (SQLException e) {
                 e.printStackTrace();
-            }
-
-            List<PlayerNPC> dnpcs = PlayerNPCFactory.getDeveloperNpcsFromMapid(mapid);
-            if (dnpcs != null) {
-                for (PlayerNPC dnpc : dnpcs) {
-                    map.addPlayerNPCMapObject(dnpc);
-                }
             }
         }
 
