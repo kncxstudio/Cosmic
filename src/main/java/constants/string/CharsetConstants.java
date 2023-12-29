@@ -35,6 +35,7 @@ public class CharsetConstants {
         LANGUAGE_US("US-ASCII"),
         LANGUAGE_PT_BR("ISO-8859-1"),
         LANGUAGE_THAI("TIS620"),
+        LANGUAGE_CN("UTF-8"),
         LANGUAGE_KOREAN("MS949");
 
         private final String charset;
