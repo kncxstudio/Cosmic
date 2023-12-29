@@ -21,6 +21,9 @@
 */
 package scripting.quest;
 
+import org.slf4j.LoggerFactory;
+import org.slf4j.Logger;
+
 import client.Client;
 import scripting.npc.NPCConversationManager;
 import server.ItemInformationProvider;
@@ -32,6 +35,7 @@ import server.quest.actions.MesoAction;
  * @author RMZero213
  */
 public class QuestActionManager extends NPCConversationManager {
+    private static final Logger log = LoggerFactory.getLogger(QuestActionManager.class);
     private final boolean start; // this is if the script in question is start or end
     private final int quest;
 
@@ -39,6 +43,7 @@ public class QuestActionManager extends NPCConversationManager {
         super(c, npc, null);
         this.quest = quest;
         this.start = start;
+        log.info(c.getPlayer().getName() + " " + (start ? "started" : "completed") + " quest " + quest);
     }
 
     public int getQuest() {

@@ -115,6 +115,7 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
         this.npcOid = oid;
         this.scriptName = scriptName;
         this.itemScript = itemScript;
+        log.info(c.getPlayer().getName() + " conversation started with npc: " + npc +" npcOid:" + npcOid +" script: " + scriptName);
     }
 
     public int getNpc() {
