@@ -1158,7 +1158,7 @@ public class Client extends ChannelInboundHandlerAdapter {
             } catch (NullPointerException e) {
                 e.printStackTrace();
             }
-        }, SECONDS.toMillis(60));
+        }, SECONDS.toMillis(15));
     }
 
     public Set<String> getMacs() {
